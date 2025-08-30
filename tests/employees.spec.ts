@@ -3,7 +3,7 @@ import { EmployeesPage } from "../page-objects/employeesPage";
 import { test, expect } from "@playwright/test";    
 
 
-test.describe.serial('Employees tests', () => {
+test.describe.serial('Employees tests: add update and delete workflow', () => {
     let employee: { firstName: string; lastName: string; dependents: number }
 
     test.beforeAll(async ({ page }) => {
