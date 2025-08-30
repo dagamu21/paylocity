@@ -28,11 +28,15 @@ Instrctions:
   Clone repository to your local machibe
     Open a terminal and send command: git clone https://github.com/dagamu21/paylocity.git
   Install dependencies
-    Open a terminal in the prject path and run command: npm install --force
+    Open a terminal in the project path and run command: npm install --force
   Install Playwright
-    Open a terminal in the prject path and run command: npm init playwright@latest
+    Open a terminal in the project path and run command: npm init playwright@latest
     Select TypeScript
     Hit enter with the rest of the options to make it as default
+  Install Playwright extension
+    Click on the Extensions tab on the left side
+    Look for Playwright Test for VS Code
+    Click on Install
   Run the tests
     In the testing tab on the left side, select "Show Browser" and select the browsers that will be tested
     Click on Run Test > icon 
