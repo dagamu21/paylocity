@@ -9,12 +9,7 @@ test('log in with valid credentials', async ({ page }) => {
     await expect(page).toHaveURL('/Prod/Benefits');
 })
 
-test('fail to log in with invalid credentials', async ({ page }) => {      
-    const loginPage = new LoginPage(page)
-    await loginPage.navigateToLoginPage()
-    await loginPage.performInvalidLogin()
-    await expect(page.locator('li:has-text("The specified username or password is incorrect.")')).toBeVisible()
-})
+
 
 test('log out after logging in', async ({ page }) => {      
     const loginPage = new LoginPage(page)
@@ -25,3 +20,9 @@ test('log out after logging in', async ({ page }) => {
 })  
 
 
+test('fail to log in with invalid credentials', async ({ page }) => {      
+    const loginPage = new LoginPage(page)
+    await loginPage.navigateToLoginPage()
+    await loginPage.performInvalidLogin()
+    await expect(page.locator('li:has-text("The specified username or password is incorrect.")')).toBeVisible()
+})

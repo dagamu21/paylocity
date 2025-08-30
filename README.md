@@ -40,6 +40,10 @@ Instrctions:
   Run the tests
     In the testing tab on the left side, select "Show Browser" and select the browsers that will be tested
     Click on Run Test > icon 
+    or use command: npx playwright test employees.spec.ts --project=chromium --headed
+    and command: npx playwright test login.spec.ts --project=chromium --headed
+
+    
 
 
 

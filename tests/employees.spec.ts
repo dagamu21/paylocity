@@ -6,8 +6,8 @@ import { test, expect } from "@playwright/test";
 test.describe.serial('Employees tests: add update and delete workflow', () => {
     let employee: { firstName: string; lastName: string; dependents: number }
 
-    test.beforeAll(async ({ page }) => {
-        const employeesPage = new EmployeesPage(page)
+    test.beforeAll(async ({ }) => {
+        const employeesPage = new EmployeesPage(null as any)
         employee = await employeesPage.setEmployeeInfo("", "", 0)
     })
 
