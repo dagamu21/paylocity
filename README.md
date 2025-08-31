@@ -43,7 +43,8 @@ Instrctions:
     or use command: npx playwright test employees.spec.ts --project=chromium --headed
     and command: npx playwright test login.spec.ts --project=chromium --headed
 
-    
+POSTMAN Collection
+  Import collection Paylocity Benefits API.postman_collection.json and run it
 
 
 
