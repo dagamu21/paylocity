@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "10a9fc4d-d59c-4f5e-a922-46471d40958c",
+		"name": "Paylocity Benefits API",
+		"description": "Paylocity Benefits API\n\nContact Support:\n Name: Paylocity Corporation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10183343"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Employees",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/Employees/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status is 200\", () => pm.response.to.have.status(200))"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Employees/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "08a3be48-eb19-48b8-9baf-ef336989c0ed"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Employees/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employees",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Employees/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status is 200\", () => pm.response.to.have.status(200))"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Employees/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Employees",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "08a3be48-eb19-48b8-9baf-ef336989c0ed",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Employees/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Employees",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Employees",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status is 200\", () => pm.response.to.have.status(200))"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "5o@!bz>Cn).&",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "TestUser785",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"j\",\n  \"firstName\": \"Jon\",\n  \"lastName\": \"Snow\",\n  \"dependants\": 2,\n  \"salary\": 52000\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Employees",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Employees"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"string\",\n  \"lastName\": \"s\",\n  \"username\": \"string\",\n  \"id\": \"6da2d188-c809-f0ef-db79-ce5cd06cb3e4\",\n  \"dependants\": 23,\n  \"expiration\": \"1945-10-23T17:20:26.436Z\",\n  \"salary\": 2392.23319702815\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Employees",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Employees"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Employees",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status is 200\", () => pm.response.to.have.status(200))\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Employees",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Employees"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Employees",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Employees"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Employees",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status is 200\", () => pm.response.to.have.status(200))"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Arya\",\n  \"lastName\": \"Stark\",\n  \"username\": \"\",\n  \"id\": \"44d293d6-e12e-4981-b01e-fa67472f610d\",\n  \"dependants\": 2,\n  \"expiration\": \"1945-10-23T17:20:26.436Z\",\n  \"salary\": -3000\n\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Employees/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Employees",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"string\",\n  \"lastName\": \"s\",\n  \"username\": \"string\",\n  \"id\": \"6da2d188-c809-f0ef-db79-ce5cd06cb3e4\",\n  \"dependants\": 23,\n  \"expiration\": \"1945-10-23T17:20:26.436Z\",\n  \"salary\": 2392.23319702815\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Employees",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Employees"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "5o@!bz>Cn).&",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "TestUser785",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/"
+		},
+		{
+			"key": "id",
+			"value": ""
+		},
+		{
+			"key": "authToken",
+			"value": "Basic VGVzdFVzZXI3ODU6NW9AIWJ6PkNuKS4m"
+		},
+		{
+			"key": "employeeId",
+			"value": ""
+		}
+	]
+}
